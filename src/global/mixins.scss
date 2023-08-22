@@ -1,0 +1,54 @@
+@mixin gap($gap) {
+  gap: $gap;
+};
+
+@mixin ticketView($color) {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: $color;
+}
+@mixin omnipresent-pseudo {
+  bottom: 0px;
+  left: 0px;
+  pointer-events: none;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+@mixin golden-shining {
+  color: #c5ad73;
+  text-shadow: 0px 1px 3px 0px black;
+}
+
+
+@mixin custom-scroll-bar {
+  &::-webkit-scrollbar {
+    border-radius: 5px;
+    height: 4px;
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #444E5C;
+    border-radius: 5px;
+    &:hover {
+      background: #444E5C;
+    }
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 4px;
+  }
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

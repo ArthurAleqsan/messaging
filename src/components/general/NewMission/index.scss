@@ -1,0 +1,18 @@
+.new-mission-toaster {
+  &__progress-bar-wrapper {
+    margin-top: 8px;
+    ;
+  }
+
+  &__progress-bar-text {
+    margin-top: 4px;
+    font-size: 10px;
+    line-height: 12px;
+    text-transform: uppercase;
+    color: #BBBBBD;
+
+    span {
+      color: #FFBF17;
+    }
+  }
+}

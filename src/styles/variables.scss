@@ -1,0 +1,41 @@
+$container: 1240px;
+
+
+// UI KIT STYLES
+$main-bg: #14161C;
+$secondary-bg: #1B1D24;
+$active-bg: #313341;
+$text-color: #F0F0E6;
+$card-color: #1f222d;
+$icon-color: #FFBF17;
+
+$badge-bg-color: #3986FA;
+$badge-text-color: #F0F0E6;
+
+$primary-btn-bg: #0f5903;
+$izvrachen-bg: #24222d;
+
+$primary-gradient-5: linear-gradient(to right, $secondary-bg 43.75%, $main-bg 100%);
+$primary-bg-opacity-8: opacify($main-bg, 0.8); 
+
+$primary: #86BE56;
+$light-primary: lighten(saturate(adjust-hue($primary, -5), 2.46), 0.59);
+$secondary: #1c4544;
+$light: #ffffff;
+$light-2: #EFEFEF;
+$dark: #6B6B6B;
+$highlight: #d76d07;
+$error: #E11900;
+
+$primary-gradient: linear-gradient(to right, #53aa3a 43.75%, $primary 100%);
+
+$light-gradient-1: linear-gradient(180deg, #fdfdfd 0%, #dfdcdc 100%);
+$light-gradient-2: linear-gradient(180deg, #fefefe 0%, #dcd9d9 48.96%);
+$light-gradient-3: linear-gradient(
+  270deg,
+  rgba(249, 249, 248, 0.02) 7.81%,
+  #f9f9f8 50.52%,
+  #e4e2e2 82.92%
+);
+$light-gradient-4: linear-gradient(to right, #ffffff 0%, #d7d3d3 100%);
+$light-gradient-5: linear-gradient(180deg, #fcfcfc 0%, #e6e3e3 100%);

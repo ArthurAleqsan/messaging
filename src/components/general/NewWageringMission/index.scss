@@ -1,0 +1,19 @@
+.new-wagering-mission-toaster {
+  &__progress-bar-wrapper {
+    margin-top: 8px;
+  }
+
+  &__progress-bar-text {
+    margin-top: 5px;
+    display: block;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    text-transform: uppercase;
+    color: #BBBBBD;
+
+    span {
+      color: #FFBF17;
+    }
+  }
+}

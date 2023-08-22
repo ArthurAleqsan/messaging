@@ -1,0 +1,132 @@
+{
+    "data": [
+        {
+            "_id": "64b6977c72413063d55b65ae",
+            "showForMobile": false,
+            "showBorders": true,
+            "accountId": 579851,
+            "type": "newMission",
+            "messageType": "popup",
+            "data": {
+                "missionId": 11420,
+                "missionName": "Chained Money mission 3",
+                "missionState": "inProgress",
+                "balance": 0,
+                "prize": {
+                    "amount": 888,
+                    "currency": "FPP",
+                    "type": "money"
+                },
+                "prizes": [
+                    {
+                        "amount": 888,
+                        "currency": "FPP",
+                        "type": "money"
+                    }
+                ],
+                "goal": 555,
+                "isProgressive": true,
+                "progressiveMissionId": 957
+            },
+            "dateCreated": "2023-07-18T13:45:32.704Z",
+            "status": "unread"
+        },
+        {
+            "_id": "64b5444572413063d55b4a09",
+            "showForMobile": false,
+            "showBorders": true,
+            "accountId": 579851,
+            "type": "newMission",
+            "messageType": "popup",
+            "data": {
+                "missionName": "7 days",
+                "missionState": "inProgress",
+                "prize": {
+                    "type": "freespins",
+                    "currency": "BRL",
+                    "spinCount": 10,
+                    "duration": 2,
+                    "gameIds": [
+                        23148
+                    ],
+                    "betLevel": 10
+                },
+                "prizes": [
+                    {
+                        "type": "freespins",
+                        "currency": "BRL",
+                        "spinCount": 10,
+                        "duration": 2,
+                        "gameIds": [
+                            23148
+                        ],
+                        "betLevel": 10
+                    }
+                ],
+                "goal": 200
+            },
+            "dateCreated": "2023-07-17T13:38:13.295Z",
+            "status": "unread"
+        },
+        {
+            "_id": "64b544447dd58f1c75074e93",
+            "showForMobile": false,
+            "showBorders": true,
+            "accountId": 579851,
+            "type": "newWageringMission",
+            "messageType": "popup",
+            "data": {
+                "balance": 0,
+                "coefficient": 2,
+                "currency": "BRL",
+                "expireDate": "2023-07-17T21:00:00.000Z",
+                "freespinsCount": 15,
+                "missionName": "Free spin",
+                "missionState": "freespins"
+            },
+            "dateCreated": "2023-07-17T13:38:12.715Z",
+            "status": "unread"
+        },
+        {
+            "_id": "64ae45fa7dd58f1c7507444f",
+            "showForMobile": false,
+            "showBorders": true,
+            "accountId": 579851,
+            "messageType": "modal",
+            "type": "tourFinished",
+            "data": {
+                "tournamentId": 7566,
+                "tournamentName": "TARGET TOURNAMENT",
+                "tournamentType": "regular",
+                "score": 0,
+                "playerPosition": 1,
+                "winning": {
+                    "amount": 500,
+                    "currency": "BRL"
+                },
+                "operatorId": 572221
+            },
+            "dateCreated": "2023-07-12T06:19:38.607Z",
+            "status": "unread"
+        },
+        {
+            "_id": "64ad17857dd58f1c75074426",
+            "showForMobile": false,
+            "showBorders": true,
+            "accountId": 579851,
+            "messageType": "popup",
+            "type": "newWageringMission",
+            "data": {
+                "balance": 0,
+                "coefficient": 2,
+                "currency": "BRL",
+                "expireDate": "2023-07-11T21:00:00.000Z",
+                "freespinsCount": 15,
+                "missionName": "Free spin",
+                "missionState": "freespins"
+            },
+            "dateCreated": "2023-07-11T08:49:09.340Z",
+            "status": "unread"
+        }
+    ]
+}

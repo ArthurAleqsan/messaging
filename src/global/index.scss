@@ -1,0 +1,143 @@
+@import './reset.scss';
+@import './variables.scss';
+@import './mixins.scss';
+@import './_constants';
+@import './icons/style.scss';
+@import './fonts/style.scss';
+@import './common.scss';
+
+body {
+  font-family: 'interRegular', sans-serif;
+  // color: $text-color;
+  min-width: 1240px;
+  min-height: 100vh;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &.modal-open,
+  &.game-open {
+    overflow: hidden;
+  }
+
+  @media (orientation: portrait) {
+    min-width: 100%;
+  }
+
+  @media (orientation: landscape) {
+    min-width: 100%;
+  }
+}
+
+input,
+input:before,
+input:after {
+  -webkit-user-select: initial;
+  -khtml-user-select: initial;
+  -moz-user-select: initial;
+  -ms-user-select: initial;
+  user-select: initial;
+}
+
+.container {
+  max-width: $container;
+  margin: 0 auto;
+}
+
+.fl {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+[type="radio"]:checked+label,
+[type="radio"]:not(:checked)+label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: inherit;
+}
+
+[type="radio"]:checked+label:before,
+[type="radio"]:not(:checked)+label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #0F5903;
+  border-radius: 100%;
+  background: rgba(15, 89, 3, 0.1);
+}
+
+[type="radio"]:checked+label:after,
+[type="radio"]:not(:checked)+label:after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #0F5903;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+[type="radio"]:not(:checked)+label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+[type="radio"]:checked+label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.FPP {
+  @include center;
+  gap: 4px;
+}
+
+
+.widget--view {
+  .game-box-widget__wrapper {
+    max-width: 232px;
+    top: 0;
+    height: 100%;
+
+    &.mobile {
+      max-width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+// Mobile
+
+
+.container {
+  padding: 0 15px;
+}
+
+
+//

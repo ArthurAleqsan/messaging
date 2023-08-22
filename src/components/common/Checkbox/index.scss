@@ -1,0 +1,93 @@
+@import "../../../styles/mixins.scss";
+
+.checkbox {
+  background: linear-gradient(to bottom, #141414, #202020);
+  border-radius: 3px;
+  box-shadow: 0px 1px 3px 3px black inset;
+  cursor: pointer;
+  height: 12px;
+  display: inline-block;
+  line-height: 12px;
+  margin-right: 5px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 12px;
+
+  &::after {
+    @include omnipresent-pseudo;
+    border-radius: 3px;
+    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.5);
+    mix-blend-mode: overlay;
+  }
+
+  &--checked {
+    .checkbox__icon {
+      display: block;
+    }
+  }
+}
+
+.checkbox__icon {
+  @include golden-shining;
+  display: none;
+  font-size: 8px;
+}
+
+// custom checkbox
+
+.custom-checkbox {
+  &__label {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #ffffff;
+
+    &:before {
+      content: "";
+      -webkit-appearance: checkbox;
+      background-color: transparent;
+      border: 1px solid #505050;
+      border-radius: 2px;
+      padding: 5.5px;
+      display: inline-block;
+      position: relative;
+      vertical-align: middle;
+      cursor: pointer;
+      margin-right: 4px;
+      transform: translateY(-1px);
+    }
+  }
+
+  &__input {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+
+    &:checked {
+      & + .custom-checkbox__label:before {
+        background-color: #287e1b;
+        border: 1px solid #287e1b;
+      }
+
+      & + .custom-checkbox__label:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 2px;
+        left: 5px;
+        width: 4px;
+        height: 9px;
+        border: solid #ffffff;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

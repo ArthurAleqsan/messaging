@@ -1,0 +1,50 @@
+@import "../../../styles/mixins.scss";
+@import "../../../styles/variables.scss";
+
+.toaster-template-left-side-widget {
+  width: 70px;
+  height: 100%;
+  flex-shrink: 0;
+  flex-direction: column;
+  @include center;
+  background: $main-bg;
+  border-radius: 8px 0 0 8px;
+
+  &__ticket-icon {
+    color: #88bc5b;
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    color: #a7a7a7;
+    text-transform: uppercase;
+  }
+
+  &__cup {
+    font-size: 11px;
+  }
+
+  &__count {
+    color: #88bc5b;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+  }
+
+  &__plus-icon-wrapper {
+    width: 32px;
+    height: 32px;
+    background-color: #313341;
+    @include center;
+    border-radius: 50%;
+
+    i {
+      font-size: 16px;
+      color: #00bf00;
+    }
+  }
+}
