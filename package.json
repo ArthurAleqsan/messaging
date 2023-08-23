@@ -1,5 +1,5 @@
 {
-  "name": "messaging",
+  "name": "gb-test-messaging",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
@@ -68,6 +68,14 @@
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "webpack.config.js",
-  "author": "",
-  "license": "ISC"
+  "author": "Arthuraleqsan",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArthurAleqsan/messaging.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ArthurAleqsan/messaging/issues"
+  },
+  "homepage": "https://github.com/ArthurAleqsan/messaging#readme"
 }
