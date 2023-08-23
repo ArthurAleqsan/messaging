@@ -1,6 +1,6 @@
 {
   "name": "gb-test-messaging",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
@@ -76,6 +76,5 @@
   },
   "bugs": {
     "url": "https://github.com/ArthurAleqsan/messaging/issues"
-  },
-  "homepage": "https://github.com/ArthurAleqsan/messaging#readme"
+  }
 }
