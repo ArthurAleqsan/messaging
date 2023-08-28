@@ -1,10 +1,13 @@
-import { FC, useCallback, useEffect, useRef, useState } from 'react';
+import React, { FC, useCallback, useEffect, useRef, useState } from 'react';
 import io from 'socket.io-client';
 import http from 'src/services/http';
+import { getTemplatesFromStrapi } from 'src/services/messaging.service';
+import { MessigingTemplates } from 'src/types/enums';
 // import { MessigingTemplates } from 'src/types/enums';
-import { IMessage } from 'src/types/interfaces';
+import { IMessage, ITemplate } from 'src/types/interfaces';
 import './index.scss';
 import Views from './Views';
+// import Views from './Views';
 
 interface IProps {
   userId: string;
@@ -32,7 +35,8 @@ const Toaster: FC<IProps> = ({ userId, username, token, skinId }) => {
 
   const [isConnected, setIsConnected] = useState<boolean>(false);
 
-  const [messages, setMessages] = useState<any>([]);
+  const [messages, setMessages] = useState<IMessage[]>([]);
+  const [templates, setTemplates] = useState<ITemplate[]>([]);
 
   const handleClose = useCallback((messageId: string) => {
     const params = {
@@ -87,20 +91,20 @@ const Toaster: FC<IProps> = ({ userId, username, token, skinId }) => {
         // setMessages(params.payload.messages[userId].filter((m: IMessage) => m.status === 'unread'));
       });
     }
+    getTemplatesFromStrapi()
+      .then((res) => res.json())
+      .then((res) => {
+        const temp = res.data.map((m: any) => m.attributes);
+        setTemplates(temp);
+      });
   }, [socket.current, skinId]);
 
   console.log('messages---', messages);
+  console.log('templates---', templates);
 
-  // const resolveViewType = useCallback((m: IMessage): any => {
-  //   if (m.type === 'newMission') {
-  //     if (m.data.isProgressive) {
-  //       return 'newProgressiveMission';
-  //     } else {
-  //       return m.type;
-  //     }
-  //   }
-  //   return m.type;
-  // }, []);
+  const getContent = useCallback((content: any): any => {
+    return content.replace('{{username&gt;}}', 'flan');
+  }, []);
 
   return (
     <div
@@ -111,10 +115,16 @@ const Toaster: FC<IProps> = ({ userId, username, token, skinId }) => {
       }}
     >
       app---- socket conected: {Number(isConnected)}
-      {messages?.map((m: IMessage) => {
-        // TO DO remove pass param from cb
-        return <Views template={m.type} data={m} onClose={() => handleClose(m._id)} />;
-      })}
+      {templates?.length &&
+        messages.map((message: IMessage) => {
+          return (
+            <Views
+              template={MessigingTemplates.notification}
+              data={getContent(templates?.[0].content)}
+              onClose={() => handleClose(message._id)}
+            />
+          );
+        })}
     </div>
   );
 };

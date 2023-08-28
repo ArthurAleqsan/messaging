@@ -35,15 +35,17 @@
 .toaster-template {
   max-width: 351px;
   min-width: 351px;
+  min-height: 70px;
   background: #1b1d24;
   border-radius: 8px;
   position: relative;
   border: 1px solid grey;
   overflow: hidden;
-
-  &__inner {
-    display: flex;
-    min-height: 100px;
+  padding: 10px;
+  color: #fff;
+  margin-bottom: 5px;
+  a {
+    text-decoration: underline;
   }
 
   &__info-wrapper {

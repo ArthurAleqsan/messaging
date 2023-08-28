@@ -1,29 +1,16 @@
-import GameBoxPrize from './general/GameBoxPrize';
-import NewMissionToaster from './general/NewMission';
-import NewProgressiveMissionToaster from './general/NewProgressiveMission';
+import Notification from './general/Notification';
 import React, { FC } from 'react';
 import { MessigingTemplates } from 'src/types/enums';
 import { IProps } from 'src/types/interfaces';
-import GameBoxJackpotMissionToaster from './general/GameBoxJackpotMission';
-import NewWageringMissionToaster from './general/NewWageringMission';
-import WagerFreespinsCompleteToaster from './general/WagerFreespinsComplete';
-// import TourFinishedMission from './general/TourfinishedMission';
+import Dialog from './general/Dialog';
 
 interface IViewsProps extends IProps {
   template: MessigingTemplates;
 }
 
 const messageRenderMap = new Map<MessigingTemplates, RenderFunction>([
-  // newProgressiveMission, newMission
-  [MessigingTemplates.newMission, (data, cb) => <NewMissionToaster data={data} onClose={cb} />],
-  // newWageringMission, newWageringMission
-  [MessigingTemplates.newWageringMission, (data, cb) => <NewWageringMissionToaster data={data} onClose={cb} />],
-  // tourFinished
-  // [MessigingTemplates.tourFinished, () => <TourFinishedMission />],
-  [MessigingTemplates.gameBoxJackpotMission, (data, cb) => <GameBoxJackpotMissionToaster data={data} onClose={cb} />],
-  [MessigingTemplates.gameBoxPrize, (data, cb) => <GameBoxPrize data={data} onClose={cb} />],
-  [MessigingTemplates.wagerFreespinsComplete, (data, cb) => <WagerFreespinsCompleteToaster data={data} onClose={cb} />],
-  [MessigingTemplates.newProgressiveMission, (data, cb) => <NewProgressiveMissionToaster data={data} onClose={cb} />],
+  [MessigingTemplates.notification, (data, cb) => <Notification data={data} onClose={cb} />],
+  [MessigingTemplates.popupDialog, (data, cb) => <Dialog data={data} onClose={cb} mode="dark" />],
 ]);
 
 const Views: FC<IViewsProps> = ({ template, data, onClose }) => {

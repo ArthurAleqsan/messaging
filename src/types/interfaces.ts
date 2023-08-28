@@ -35,3 +35,7 @@ export interface IMessage {
   _id: string;
   messageType: 'popup' | 'modal';
 }
+export interface ITemplate {
+  messageType: MessigingTemplates;
+  content: string;
+}

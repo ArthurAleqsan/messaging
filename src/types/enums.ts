@@ -1,9 +1,11 @@
 export enum MessigingTemplates {
-  gameBoxJackpotMission = 'gameBoxJackpotMission',
-  newMission = 'newMission',
-  newWageringMission = 'newWageringMission',
-  gameBoxPrize = 'gameBoxPrize',
-  wagerFreespinsComplete = 'wagerFreespinsComplete',
-  newProgressiveMission = 'newProgressiveMission',
-  tourFinished = 'tourFinished',
+  // gameBoxJackpotMission = 'gameBoxJackpotMission',
+  // newMission = 'newMission',
+  // newWageringMission = 'newWageringMission',
+  // gameBoxPrize = 'gameBoxPrize',
+  // wagerFreespinsComplete = 'wagerFreespinsComplete',
+  // newProgressiveMission = 'newProgressiveMission',
+  // tourFinished = 'tourFinished',
+  notification = 'notification',
+  popupDialog = 'popupDialog',
 }

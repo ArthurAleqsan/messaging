@@ -1,0 +1,6 @@
+@import "./../../../styles/variables.scss";
+.dark {
+    .ant-modal-content {
+        background: $main-bg;
+    }
+}
