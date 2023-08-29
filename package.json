@@ -1,6 +1,6 @@
 {
   "name": "gb-test-messaging",
-  "version": "0.1.22",
+  "version": "0.1.23",
   "private": false,
   "dependencies": {
     "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
@@ -103,9 +103,9 @@
     ]
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "build/js/index.js",
-  "module": "build/esm/index.js",
-  "types": "build/js/index.d.ts",
+  "main": "dist/js/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/js/index.d.ts",
   "publishConfig": {
     "access": "public",
     "tag": "prerelease"
