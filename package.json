@@ -1,6 +1,6 @@
 {
   "name": "gb-test-messaging",
-  "version": "0.1.26",
+  "version": "0.1.27",
   "private": false,
   "dependencies": {
     "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
@@ -82,12 +82,18 @@
     "build:babel:umd": "BABEL_ENV=umd babel --source-maps --extensions \".js\" dist/esm --out-dir dist/umd --plugins=transform-es2015-modules-umd",
     "build:types": "tsc -p tsconfig.gen-dts.json",
     "clean": "rimraf dist",
-    "develop": "yarn build:types && yarn build:babel:esm --skip-initial-build --watch --verbose"
+    "develop": "yarn build:types && yarn build:babel:esm --skip-initial-build --watch --verbose",
+    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/components -d dist --copy-files"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
     ]
   },
   "browserslist": {
@@ -101,6 +107,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "peerDependencies": {
+    "react": ">=15.0.1",
+    "react-dom": ">=15.0.1"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "dist/js/index.js",
