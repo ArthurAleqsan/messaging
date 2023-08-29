@@ -1,5 +1,5 @@
-import React, { FC, useState, useCallback } from 'react';
-import { IProps } from 'src/types/interfaces';
+import { FC, useState, useCallback } from 'react';
+import { IProps } from './../../../../src/types/interfaces';
 import { Modal } from 'antd';
 import './styles.scss';
 

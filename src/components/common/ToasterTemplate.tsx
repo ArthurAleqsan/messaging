@@ -1,18 +1,4 @@
-import React, { useEffect } from 'react';
-
-const TOASTER_ICONS = {
-  raffleNewMissionToaster: 'raffle-draw',
-  tournamentNewMissionToaster: 'tournament',
-  depositNewMissionToaster: 'deposit',
-  freeSpinsNewMissionToaster: 'freespins',
-  gameBoxJackpotMissionToaster: 'raffle-draw',
-  moneyCongratulationMessages: 'deposit',
-  tourTicketCongratulationMessages: 'tournament',
-  freeSpinMissionCompleateToaster: 'freespins',
-  depositMissionCongratsToaster: 'deposit',
-  freeSpinMissionCongratsToaster: 'freespins',
-  tounamentMissionCongratsToaster: 'tournament',
-};
+import { useEffect } from 'react';
 
 interface IProps {
   onClose: () => void;
@@ -47,38 +33,6 @@ const ToasterTemplate: any = ({ onClose, children, timerDelay }: IProps) => {
           />
         </div>
       )}
-    </div>
-  );
-};
-
-ToasterTemplate.Left = ({ children }: any) => {
-  return <div className="toaster-template__left-side-wrapper">{children}</div>;
-};
-ToasterTemplate.Right = ({ children, titleParams, toasterName, textParams, t, timerDelay }: any) => {
-  return (
-    <div className="toaster-template__info-wrapper" style={{ padding: `12px 8px ${+timerDelay > 0 ? 13 : 8}px` }}>
-      <div className="toaster-template__info-title-wrapper">
-        <span
-          className="toaster-template__info-title"
-          dangerouslySetInnerHTML={{
-            __html: t(`${toasterName}.title`, titleParams ?? {}),
-          }}
-        />
-        {!!TOASTER_ICONS[toasterName] && (
-          <img
-            src={`/images/${TOASTER_ICONS[toasterName]}.svg`}
-            alt="deposit"
-            className="toaster-template__info-title--img"
-          />
-        )}
-      </div>
-      <span
-        className="toaster-template__info-text"
-        dangerouslySetInnerHTML={{
-          __html: t(`${toasterName}.text`, textParams ?? {}),
-        }}
-      />
-      {children}
     </div>
   );
 };

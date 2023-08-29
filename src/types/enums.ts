@@ -1,11 +1,4 @@
-export enum MessigingTemplates {
-  // gameBoxJackpotMission = 'gameBoxJackpotMission',
-  // newMission = 'newMission',
-  // newWageringMission = 'newWageringMission',
-  // gameBoxPrize = 'gameBoxPrize',
-  // wagerFreespinsComplete = 'wagerFreespinsComplete',
-  // newProgressiveMission = 'newProgressiveMission',
-  // tourFinished = 'tourFinished',
+export enum EnumMessigingTemplates {
   notification = 'notification',
   popupDialog = 'popupDialog',
 }

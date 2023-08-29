@@ -1,16 +1,17 @@
 import Notification from './general/Notification';
-import React, { FC } from 'react';
-import { MessigingTemplates } from 'src/types/enums';
-import { IProps } from 'src/types/interfaces';
+import { FC } from 'react';
+import { EnumMessigingTemplates } from './../types/enums';
+import { IProps } from './../types/interfaces';
 import Dialog from './general/Dialog';
+import { RenderFunction } from './../types/types';
 
 interface IViewsProps extends IProps {
-  template: MessigingTemplates;
+  template: EnumMessigingTemplates;
 }
 
-const messageRenderMap = new Map<MessigingTemplates, RenderFunction>([
-  [MessigingTemplates.notification, (data, cb) => <Notification data={data} onClose={cb} />],
-  [MessigingTemplates.popupDialog, (data, cb) => <Dialog data={data} onClose={cb} mode="dark" />],
+const messageRenderMap = new Map<EnumMessigingTemplates, RenderFunction>([
+  [EnumMessigingTemplates.notification, (data, cb) => <Notification data={data} onClose={cb} />],
+  [EnumMessigingTemplates.popupDialog, (data, cb) => <Dialog data={data} onClose={cb} mode="dark" />],
 ]);
 
 const Views: FC<IViewsProps> = ({ template, data, onClose }) => {

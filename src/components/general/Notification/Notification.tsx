@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
-import ToasterTemplate from 'src/components/common/ToasterTemplate';
-import { IProps } from 'src/types/interfaces';
+import { FC } from 'react';
+import ToasterTemplate from './../../../../src/components/common/ToasterTemplate';
+import { IProps } from './../../../../src/types/interfaces';
 
 const Notification: FC<IProps> = ({ data, onClose }) => {
   return (

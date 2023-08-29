@@ -1,6 +1,5 @@
 import axios, { AxiosInstance } from 'axios';
-import { token } from 'src/App';
-import { SUCCESS_STATUSES } from 'src/utils/constants';
+import { SUCCESS_STATUSES } from './../../src/utils/constants';
 
 // eslint-disable-next-line no-console
 
@@ -13,7 +12,7 @@ const onFulfilled = (response: any): any => response?.data;
 const filterValue = <T>(value: T): boolean => value !== undefined && value !== null;
 
 function getToken(): string {
-  return JSON.parse(localStorage.getItem('user') as string)?.token || token;
+  return JSON.parse(localStorage.getItem('user') as string)?.token || '';
 }
 
 const setHeaders = (axiosApi: AxiosInstance): void => {

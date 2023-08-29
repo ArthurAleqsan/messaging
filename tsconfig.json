@@ -14,7 +14,7 @@
       "dom.iterable",
       "esnext"
       ],                                       /* Specify library files to be included in the compilation. */
-    "jsx": "preserve",                         /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
+    "jsx": "react-jsx",                         /* Specify JSX code generation: 'preserve', 'react-native', or 'react'. */
     // "downlevelIteration": true,             /* Provide full support for iterables in 'for-of', spread, and destructuring when targeting 'ES5' or 'ES3'. */
     // "importHelpers": true,                  /* Import emit helpers from 'tslib'. */
     // "incremental": true,                    /* Enable incremental compilation */

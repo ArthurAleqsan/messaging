@@ -1,4 +1,4 @@
-import { MessigingTemplates } from './enums';
+import { EnumMessigingTemplates } from './enums';
 
 export interface IProps {
   data: any;
@@ -31,11 +31,11 @@ export interface IMessage {
   showBorders: boolean;
   showForMobile: boolean;
   status: 'unread' | 'read';
-  type: MessigingTemplates;
+  type: EnumMessigingTemplates;
   _id: string;
   messageType: 'popup' | 'modal';
 }
 export interface ITemplate {
-  messageType: MessigingTemplates;
+  messageType: EnumMessigingTemplates;
   content: string;
 }
