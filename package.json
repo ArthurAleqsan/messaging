@@ -1,6 +1,6 @@
 {
   "name": "gb-test-messaging",
-  "version": "0.1.36",
+  "version": "0.1.37",
   "private": false,
   "dependencies": {
     "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
