@@ -2,7 +2,7 @@
     "compilerOptions": {
       "declaration": true,
       "emitDeclarationOnly": true,
-      "outDir": "dist/js",
+      "outDir": "dist",
       "jsx": "react-jsx",
       "lib": [
         "es2017",
@@ -24,6 +24,5 @@
       "./src/**/**.test.ts",
       "./src/**/**.stories.ts",
       "./src/**/**.stories.tsx",
-      "./src/**/examples/**"
     ]
 }

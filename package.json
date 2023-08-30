@@ -1,6 +1,6 @@
 {
   "name": "gb-test-messaging",
-  "version": "0.1.29",
+  "version": "0.1.30",
   "private": false,
   "dependencies": {
     "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
@@ -111,6 +111,9 @@
   "main": "dist/js/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/js/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
   "publishConfig": {
     "access": "public",
     "tag": "prerelease"
