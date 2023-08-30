@@ -1,6 +1,6 @@
 {
   "name": "gb-test-messaging",
-  "version": "0.1.28",
+  "version": "0.1.29",
   "private": false,
   "dependencies": {
     "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
@@ -89,11 +89,6 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-react"
     ]
   },
   "browserslist": {
